@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Notebook</title>
+  <!-- Icons & Stylesheets -->
+  <link href="https://fonts.loli.net/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Include the library in the page -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- <script src="https://unpkg.com/marked"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Notebook app -->
+  <div id="notebook">
+    <!-- 侧边栏 -->
+    <aside class="side-bar">
+      <div class="toolbar">
+        <button><i class="material-icons">add</i> Add note</button>
+      </div>
+    </aside>
+    <!-- Main pane -->
+    <section class="main">
+      <textarea v-model="content"></textarea>
+    </section>
+
+    <!-- Preview pane -->
+    <aside class="preview" v-html="notePreview">
+    </aside>
+
+  </div>
+
+  <!-- Some JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
